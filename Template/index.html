@@ -4,20 +4,43 @@
 
         <style>
 
-            .main{
+            /* .main{
                 background-color: red;
                 width: 1000px;
                 font-size: large;
                 padding: 30;
-            }
+            } */
 
         </style>
     </head>
 
     <body>
+        {% for n in clist %}
         <div class="main">
-            {{data}}, 
-            {{db}}
+            {{forloop.counter}} {{n}}
         </div>
+        {% endfor %}
+
+        <br/>
+        <table border="1" cellpadding="10">
+
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>email</th>
+                <th>address</th>
+            </tr>
+
+            {% for d in studentDetails %}
+            <tr>
+                <td>{{d.name}}</td>
+                <td>{{d.age}}</td>
+                <td>{{d.email}}</td>
+                <td>{{d.address}}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+
     </body>
 </html>

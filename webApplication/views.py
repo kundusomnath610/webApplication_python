@@ -8,8 +8,18 @@ def home(resuest):
     data={
         'title': "Home Index",
         'data': "Server Side rendering",
-        'db': "MySQL, PostgreSQL"
+        'db': "MySQL, PostgreSQL",
+        'clist' : [
+            "Java", "Python", "Django", "SpringBoot", "Flask"
+            ],
+        'studentDetails': [ {
+            'name': "Somnath Kundu",
+            'age': 24,
+            'email': "kun12@gmail.com",
+            'address': "Kolkata, India",
+        } ],
     }
+
     return render(resuest, "index.html", data)
 
 def aboutUs(resuest):
