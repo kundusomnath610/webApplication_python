@@ -21,6 +21,7 @@ from webApplication.views import *
 
 
 urlpatterns = [
+    path('', home),
     path('admin/', admin.site.urls),
     path('about/', aboutUs),
     path('technology/', course),
